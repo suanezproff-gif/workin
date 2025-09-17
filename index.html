@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+
+    <!-- Estilo CSS -->
+     <style>
+        body {
+            background-color: #00205b; /*fondo azul oscuro*/
+            font-family:  Baskerville, sans-serif;
+            color: #ffffff; /*texto blanco para que se diferencie bien del fondo*/
+            display:flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #f7e200;
+            padding: 30px;
+            border-radius: 10px;
+            color:#00205b;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+    h2 {
+        text-align: center;
+        color:#00205b;
+    }
+    label {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="text"],
+    input[type="email"] {
+        background-color:#f7e200;
+        color: #00205b;
+        width: 80%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1.5px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        background-color: #f7e200;
+        color:#00205b;
+        font-weight: bold;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover {
+        background-color: #e6d100;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>Generar html para firma</h2>
+ 
+    <form action="backend.php" method="POST" enctype="multipart/form-data">
+
+     <label for="Usuario">Usuario:</label>
+     <input type="text" id="Usuario" name="Usuario" required>
+    
+     <br>  <br>
+
+     <label for="email">Correo corporativo:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>  <br>
+
+        <input type="submit" value="Generar">
+         <br>  <br>
+     <label for="archivo">Subir archivo:</label>
+        <input type="file" id="archivo" name="archivo">
+        <br> <br>
+    
+        <label>
+            <input type="checkbox" id="sin-archivo" name="sin-archivo">
+            No quiero subir ningún archivo
+        </label>
+    </form>
+
+</body>
+
+</html>
